@@ -1,16 +1,16 @@
-function [] = plot_piano(frequencies,powerSpectrum)
+function [] = plot_piano(frequencies,powerSpectrum,maxFFT,limits)
 %PLOT_PIANO Summary of this function goes here
 %   Detailed explanation goes here
 
 [notes,whiteKeysIndexes,blackKeysIndexes] = piano_info();
 
 % Plot Piano
-A = 1.2 .* max(powerSpectrum);
-% A = 1.5;
+% A = 1.2 .* max(powerSpectrum);
+A = 1.2*maxFFT;
 clf
 hold on
-f_min = 0.2535e3;    
-f_max = 1.08e3;
+f_min = limits(1);
+f_max = limits(2);
 
 for i = 1+1:60-1
     index = whiteKeysIndexes(i);
@@ -34,15 +34,20 @@ for i = 1+1:42-1
 end
 
 plot(log(frequencies),powerSpectrum,'color','r', 'Linewidth', 3)
+
+% plot(log(frequencies),powerSpectrum, 'linewidth',2)
+
+xlim(log([f_min, f_max]))
 ylim([0, A])
 
 c_octaves = log(16.4.*(2.^(1:6))); % octaves of C
 xticks(c_octaves) 
 xticklabels({'C1','C2','C3','C4','C5','C6'})
-
-xlim(log([f_min, f_max]))
-% xlim([c_octaves(1), c_octaves(end)])
 yticks([])
+
+x0=100;y0=100;width=2*550;height=400;
+set(gcf,'units','points','position',[x0,y0,width,height])
 hold off
+
 end
 

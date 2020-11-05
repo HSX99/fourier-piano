@@ -1,8 +1,7 @@
-function [] = make_gif(h,F,X,i)
+function [] = make_gif(h,F,X,maxFFT,limits,i,filename)
 axis tight manual % this ensures that getframe() returns a consistent size
-filename = 'testAnimated.gif';
 
-plot_piano(F,X)
+plot_piano(F,X,maxFFT,limits)
 drawnow 
 % Capture the plot as an image 
 frame = getframe(h); 
