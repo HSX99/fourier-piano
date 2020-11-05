@@ -15,3 +15,4 @@ Using a plot like this, the interpretation is simplified.
 
 ## Me singing a chord: C7 arpeggio
 ![](c7.gif)
+The notes in a C7 chords are C, E, G and Bb.
