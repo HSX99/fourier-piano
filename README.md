@@ -7,11 +7,11 @@ The signal is me humming a C4. We see the overtones C5, G5 and C6 in the plot.
 
 ## Another way of plotting the Fourier transform
 ![](c-log-freq.png)
-The same signal (me humming a C4), but the horizontal axis has been scaled logarithmically. Therefore the octaves are equally spaced, much like on a piano!
+The same signal (me humming a C4), but the horizontal axis has been scaled logarithmically. Consequentially, the octaves are now equally spaced, much like on a piano!
 
 ## Plotting the Fourier transform
 ![](c-piano.png)
-Now we can easily project the power spectrum on a black and white piano background.
+Now we can easily project the power spectrum on a piano backdrop.
 
 ## Me singing a chord: C7 arpeggio
 ![](c7.gif)
