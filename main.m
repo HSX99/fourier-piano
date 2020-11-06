@@ -1,44 +1,29 @@
-clear all
+ 
+% timeSpan = 6;
+% fs = 8192;
+% x = record(timeSpan, fs); % record voice
 
-timeSpan = 6;
-fs = 4000;
-nSamples = fs*timeSpan;
+load('train.mat');
+fs = Fs;    % the sampling frequency of the sound 
+x = y;      % the signal
 
-%%
-x = record(timeSpan, fs);
+[F, allFFTWindows,nWindows] = split2windows(x, fs); % divide signal into windows
 
-%%
-timeWindow = 0.4;
-windowOverlap = 0.3;
-nSamplesWindow = fs*timeWindow;
-nWindows = floor((nSamples-(nSamplesWindow*windowOverlap))/(nSamplesWindow*(1-windowOverlap)));
+low_c = 5;  % lowest c shown on the piano
+high_c = 7; % highest c shown on the piano
+delta = 0.51; %  extra space to show the left and rightmost keys completely on the piano
+C0 = 16.4;  % frequency of bottom C
+freq_limits = [(C0-delta)*2.^low_c, (C0+delta)*2.^high_c];
 
-allFFTWindows = nan(nWindows,nSamplesWindow/2);
+maxFFT = max_in_range(allFFTWindows,F,freq_limits); % used for scaling the piano background
 
-for i = 1:nWindows
-    a = floor((i-1)*nSamplesWindow*(1-windowOverlap)+1);
-    b = a + nSamplesWindow - 1;
-    xWindowed = x(a:b).*hamming(nSamplesWindow);
-    [F,X] = single_sided_spectrum(xWindowed,fs,timeWindow);
-    allFFTWindows(i,:) = X;
-end
-
-limits = 1e3.*[0.2538, 1.08];
-above = F > limits(1);
-below = F < limits(2);
-inPianoRange = bitand(above, below);
-F = F(inPianoRange);
-allFFTWindows = allFFTWindows(:,inPianoRange==1);
-maxFFT = max(allFFTWindows(:));
-%%
 h = figure;
-filename = 'animation.gif';
+filename = 'gifs/gif-name.gif';
+
 for i = 1:nWindows
     X = allFFTWindows(i,:);
-    % plot_piano(F,X,maxFFT,limits)
-    make_gif(h,F,X,maxFFT,limits,i,filename);
-    % pause(0.01)
+    plot_piano(F,X,maxFFT,freq_limits)
+    % make_gif(h,F,X,maxFFT,freq_limits,i,filename);
+    pause(0.01)
 end
-
-
 
