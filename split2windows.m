@@ -1,5 +1,5 @@
 function [F,allFFTWindows,nWindows] = split2windows(x, fs)
-timeWindow = 0.4;       % seconds per window, approximate
+timeWindow = 0.4;       % seconds per window
 windowOverlap = 0.3;    % overlap between consecutive windows (0 = no overlap, etc.)
 
 nSamples = length(x);
