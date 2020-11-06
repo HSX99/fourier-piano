@@ -17,3 +17,8 @@ Now we can easily project the power spectrum on a piano backdrop.
 ![](c7.gif)
 
 The notes in a C7 chord are C, E, G and Bb.
+
+## `load('train.mat')`
+![](train.gif)
+Analysis of the Matlab built-in "train whistles" sound byte
+
