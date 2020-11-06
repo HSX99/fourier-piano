@@ -7,7 +7,7 @@ The signal is me humming a C4. We see the overtones C5, G5 and C6 in the plot.
 
 ## Another way of plotting the Fourier transform
 ![](pngs/c-log-freq.png)
-The same signal (me humming a C4), but the horizontal axis has been scaled logarithmically. Consequentially, the octaves are now equally spaced, much like on a piano!
+The same signal (me humming a C4), but the horizontal axis has been scaled logarithmically. Consequentially, the octaves are now *equally spaced*, much like on a piano!
 
 ## Plotting the Fourier transform on a piano
 ![](pngs/c-piano.png)
@@ -20,5 +20,5 @@ The notes in a C7 chord are C, E, G and Bb.
 
 ## `load('train.mat')`
 ![](gifs/train.gif)
-Analysis of the Matlab built-in "train whistles" sound byte. We see that it is composed of an inverted D minor chord.
+Analysis of the Matlab built-in "train whistles" sound byte. We see that it is composed of an inverted D minor chord
 
