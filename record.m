@@ -3,9 +3,9 @@ function x = record(timeSpan, fs)
 % Detailed explanation goes here
 % Settings
 x = audiorecorder(fs, 16, 1);
-disp('Start speaking.')
+disp('RECORDING')
 recordblocking(x, timeSpan);
-disp('End of Recording.');
+disp('RECORDING FINISHED');
 x = getaudiodata(x);
 end
 
