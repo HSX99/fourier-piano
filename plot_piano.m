@@ -42,6 +42,10 @@ xticklabels({'C1','C2','C3','C4','C5','C6','C7','C8'})
 yticks([])
 
 x0=100;y0=100;width=2*550;height=400;
+
+a = get(gca,'XTickLabel');
+set(gca,'XTickLabel',a,'fontsize',16)
+
 set(gcf,'units','points','position',[x0,y0,width,height])
 hold off
 
