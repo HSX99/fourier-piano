@@ -20,5 +20,5 @@ The notes in a C7 chord are C, E, G and Bb.
 
 ## `load('train.mat')`
 ![](gifs/train.gif)
-Analysis of the Matlab built-in "train whistles" sound byte
+Analysis of the Matlab built-in "train whistles" sound byte.
 
