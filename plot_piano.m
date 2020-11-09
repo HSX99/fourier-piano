@@ -1,4 +1,4 @@
-function [] = plot_piano(frequencies,fftVec,fftMax,freqLimits)
+function [] = plot_piano(frequencies,fftVec,fftMax,freqLimits,nOctaves)
 %PLOT_PIANO Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -41,7 +41,9 @@ xticks(c_octaves)
 xticklabels({'C1','C2','C3','C4','C5','C6','C7','C8'})
 yticks([])
 
-x0=100;y0=100;width=2*550;height=400;
+x0=100;y0=100;
+width=550*nOctaves;
+height=400;
 
 a = get(gca,'XTickLabel');
 set(gca,'XTickLabel',a,'fontsize',16)

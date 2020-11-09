@@ -1,7 +1,7 @@
-function [] = make_gif(h,F,X,maxFFT,limits,i,filename)
+function [] = make_gif(h,F,X,maxFFT,limits,nOctaves,i,filename)
 axis tight manual % this ensures that getframe() returns a consistent size
 
-plot_piano(F,X,maxFFT,limits)
+plot_piano(F,X,maxFFT,limits,nOctaves)
 drawnow 
 % Capture the plot as an image 
 frame = getframe(h); 
