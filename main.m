@@ -37,12 +37,12 @@ freq_limits = [(C0-delta)*2.^low_c, (C0+delta)*2.^high_c];
 maxFFT = max_in_range(allFFTWindows,F,freq_limits); % used for scaling the piano background
 
 h = figure;
-filename = 'gifs/intel.gif';
+% filename = 'gifs/intel.gif';
 
 for i = 1:nWindows
     X = allFFTWindows(i,:);
-    % plot_piano(F,X,maxFFT,freq_limits,nOctaves)
-    make_gif(h,F,X,maxFFT,freq_limits,nOctaves,i,filename);
+    plot_piano(F,X,maxFFT,freq_limits,nOctaves)
+    % make_gif(h,F,X,maxFFT,freq_limits,nOctaves,i,filename);
     pause(0.01)
 end
 
