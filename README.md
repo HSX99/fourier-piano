@@ -3,14 +3,17 @@ As a musician and electrical engineer I like to think about the Fourier transfor
 
 ## A common way of plotting the Fourier transform
 ![](pngs/c-linear-freq.png)
+
 The signal is me humming a C4. We see the overtones C5, G5 and C6 in the plot.
 
 ## Another way of plotting the Fourier transform
 ![](pngs/c-log-freq.png)
+
 The same signal (me humming a C4), but the horizontal axis has been scaled logarithmically. Consequentially, the octaves are now *equally spaced*, much like on a piano!
 
 ## Plotting the Fourier transform on a piano
 ![](pngs/c-piano.png)
+
 Now we can easily project the power spectrum on a piano backdrop.
 
 ## Me singing an arpeggiated C7 chord
@@ -20,8 +23,10 @@ The notes in a C7 chord are C, E, G and Bb.
 
 ## `load('train.mat')`
 ![](gifs/train.gif)
+
 Analysis of the Matlab built-in "train whistles" sound byte. We see that it is composed of an inverted D minor chord
 
 ## Intel sound logo
 ![](gifs/intel.gif)
+
 Analysis of the Intel sound logotype. I was surprised to realise that the initial C# slides seamlessly into a G#, and now I can't unhear it. 
