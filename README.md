@@ -22,3 +22,6 @@ The notes in a C7 chord are C, E, G and Bb.
 ![](gifs/train.gif)
 Analysis of the Matlab built-in "train whistles" sound byte. We see that it is composed of an inverted D minor chord
 
+## Intel sound logo
+![](gifs/intel.gif)
+Analysis of the Intel sound logotype. I was surprised to realise that the initial C# slides seamlessly into a G#, and now I can't unhear it. 
