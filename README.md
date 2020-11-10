@@ -29,4 +29,4 @@ Analysis of the Matlab built-in "train whistles" sound byte. We see that it is c
 ## Twin Peaks Theme
 ![](gifs/twin-peaks.gif)
 
-![](pngs/twin-peaks.gif)
+![](pngs/twin-peaks.png)
