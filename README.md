@@ -16,11 +16,6 @@ The same signal (me humming a C4), but the horizontal axis has been scaled logar
 
 Now we can easily project the power spectrum on a piano backdrop.
 
-## Me singing an arpeggiated C7 chord
-![](gifs/c7.gif)
-
-The notes in a C7 chord are C, E, G and Bb.
-
 ## `load('train.mat')`
 ![](gifs/train.gif)
 
