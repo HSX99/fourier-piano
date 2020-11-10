@@ -29,4 +29,6 @@ Analysis of the Matlab built-in "train whistles" sound byte. We see that it is c
 ## Twin Peaks Theme
 ![](gifs/twin-peaks.gif)
 
+Using this visual support, it becomes pretty easy to transcribe the cluster chords:
+
 ![](pngs/twin-peaks.png)
