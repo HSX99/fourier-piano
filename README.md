@@ -22,10 +22,12 @@ Now we can easily project the power spectrum on a piano backdrop.
 Analysis of the Matlab built-in "train whistles" sound byte. We see that it is composed of an inverted D minor chord
 
 ## Twin Peaks Theme
-[//]: # (![](gifs/twin-peaks.gif))
+
+![](gifs/twin-peaks.gif)
 
 Using this visual support, it becomes pretty easy to transcribe the cluster chords:
-[//]: # (![](pngs/twin-peaks.png))
+
+![](pngs/twin-peaks.png)
 
 ## Simon Åkesson's Gbmaj7#9#11no3
 
