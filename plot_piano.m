@@ -1,4 +1,4 @@
-function [] = plot_piano(maxFFT,low,high)
+function [] = plot_piano(maxFFT,low,high,A)
 %PLOT_PIANO
 NOTE_ABOVE_RATIO = 2^(1/12);    % factor of adjecent keys
 NOTE_BELOW_RATIO = 2^(-1/12);
@@ -8,7 +8,7 @@ f_min = 16.4.*(2.^low)*HALFWAY_BELOW_FACTOR;
 f_max = 16.4.*(2.^high)*HALFWAY_ABOVE_FACTOR;
 
 
-[notes,whiteKeysIndexes,blackKeysIndexes] = piano_info();
+[notes,whiteKeysIndexes,blackKeysIndexes] = piano_info(A);
 A = 1.2*maxFFT;
 
 % plot the white keys
