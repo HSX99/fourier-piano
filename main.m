@@ -46,9 +46,9 @@ x = mean(x,2);  % naive stereo -> mono
 
 % timeWindow = 0.2;       % seconds per window
 timeWindow = 0.3*length(x)/fs;       % seconds per window
-windowOverlap = 0.8;    % overlap between consecutive windows (0 = no overlap, etc.)
+windowOverlap = 0.9;    % overlap between consecutive windows (0 = no overlap, etc.)
 low_c = 2;  % lowest c shown on the piano
-high_c = 6; % highest c shown on the piano
+high_c = 5; % highest c shown on the piano
 frameTime = 5; %timeWindow*(1-windowOverlap);
 
 %%
@@ -62,11 +62,11 @@ maxFFT = max_in_range(allFFTWindows,F,low_c,high_c); % used for scaling the pian
 plot_sequence(F,allFFTWindows,maxFFT,low_c,high_c,A,frameTime)
 
 %%
-make_gif(F,allFFTWindows,maxFFT,low_c,high_c,A,'gifs/Gbmaj7#9#11no3.gif')
+make_gif(F,allFFTWindows,maxFFT,low_c,high_c,A,'gifs/chord.gif')
 
 %%
 plot_sequence(F,allFFTWindows,maxFFT,low_c,high_c,A,1)
-saveas(gcf,'pngs/Gbmaj7#9#11no3.png')
+saveas(gcf,'pngs/chord.png')
 
 
 
