@@ -27,3 +27,7 @@ Analysis of the Matlab built-in "train whistles" sound byte. We see that it is c
 Using this visual support, it becomes pretty easy to transcribe the cluster chords:
 
 ![](pngs/twin-peaks.png)
+
+## Simon Åkesson's Gbmaj7#9#11no3
+![](gifs/Gbmaj7#9#11no3.gif)
+
