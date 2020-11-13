@@ -10,6 +10,7 @@ low_c = 3;  % lowest c shown on the piano
 high_c = 5; % highest c shown on the piano
 
 %% train
+A = 440;
 load('train.mat');
 fs = Fs;    % the sampling frequency of the sound 
 x = y;      % the signal
@@ -17,6 +18,7 @@ timeWindow = 0.2;
 windowOverlap = 0.3;    % overlap between consecutive windows (0 = no overlap, etc.)
 low_c = 5;  % lowest c shown on the piano
 high_c = 7; % highest c shown on the piano
+frameTime = timeWindow*(1-windowOverlap);
 
 %% intel
 [x,fs] = audioread('sounds/intel-sound-logo.mp3');
@@ -62,7 +64,7 @@ maxFFT = max_in_range(allFFTWindows,F,low_c,high_c); % used for scaling the pian
 plot_sequence(F,allFFTWindows,maxFFT,low_c,high_c,A,frameTime)
 
 %%
-make_gif(F,allFFTWindows,maxFFT,low_c,high_c,A,'gifs/chord.gif')
+make_gif(F,allFFTWindows,maxFFT,low_c,high_c,A,'gifs/train.gif')
 
 %%
 plot_sequence(F,allFFTWindows,maxFFT,low_c,high_c,A,1)
