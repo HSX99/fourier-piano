@@ -31,7 +31,7 @@ Using this visual support, it becomes pretty easy to transcribe the cluster chor
 
 ## Simon Åkesson's Gbmaj7#9#11no3
 
-![](pngs/chord.png)
+![](gifs/chord.gif)
 
 Audio from [Gbmaj7#9#11no3][video].
 
