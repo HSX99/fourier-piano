@@ -31,7 +31,9 @@ Using this visual support, it becomes pretty easy to transcribe the cluster chor
 ## Simon Åkesson's Gbmaj7#9#11no3
 
 ![](gifs/Gbmaj7#9#11no3.gif)
-i
-<div>Audio from <a href="https://www.youtube.com/watch?v=A9QAW4qXCn4" title="Gbmaj7#9#11no3"/a></div>
+
+Audio from [Gbmaj7#9#11no3][video]
+
+[video]: https://www.youtube.com/watch?v=A9QAW4qXCn4
 
 
