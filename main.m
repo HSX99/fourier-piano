@@ -1,4 +1,5 @@
 
+
 %% recording
 timeSpan = 5;
 fs = 8192;
@@ -25,6 +26,30 @@ windowOverlap = 0.3;    % overlap between consecutive windows (0 = no overlap, e
 low_c = 4;  % lowest c shown on the piano
 high_c = 5; % highest c shown on the piano
 
+%% twin peaks
+% set tuning convention, e.g. 435, 440, 442
+A = 440;
+% [x,fs] = audioread('sounds/twin-peaks-theme.mp3',44100.*[1.0, 7.15]);
+[x,fs] = audioread('sounds/twin-peaks-theme.mp3',[46100, 331900]);  % wamp
+x = mean(x,2);  % naive stereo -> mono
+timeWindow = 0.24;       % seconds per window
+windowOverlap = 0.1;    % overlap between consecutive windows (0 = no overlap, etc.)
+low_c = 2;  % lowest c shown on the piano
+high_c = 6; % highest c shown on the piano
+frameTime = timeWindow*(1-0.1);
+
+%% Simon Åkesson's Gbmaj7#9#11no3
+A = 442;
+% [x,fs] = audioread('sounds/Gbmaj7#9#11no3.mp3');  %
+[x,fs] = audioread('sounds/Gbmaj7#9#11no3.mp3', [4.15e5, 5.8e5]);  %
+x = mean(x,2);  % naive stereo -> mono
+
+% timeWindow = 0.2;       % seconds per window
+timeWindow = 0.3*length(x)/fs;       % seconds per window
+windowOverlap = 0.8;    % overlap between consecutive windows (0 = no overlap, etc.)
+low_c = 2;  % lowest c shown on the piano
+high_c = 6; % highest c shown on the piano
+frameTime = 5; %timeWindow*(1-windowOverlap);
 
 %%
 sound(x,fs)
@@ -34,10 +59,14 @@ sound(x,fs)
 
 maxFFT = max_in_range(allFFTWindows,F,low_c,high_c); % used for scaling the piano background
 %%
-display_sequence(F,allFFTWindows,maxFFT,low_c,high_c)
+plot_sequence(F,allFFTWindows,maxFFT,low_c,high_c,A,frameTime)
 
 %%
-make_gif(F,allFFTWindows,maxFFT,low_c,high_c,'test-new.gif')
+make_gif(F,allFFTWindows,maxFFT,low_c,high_c,A,'gifs/Gbmaj7#9#11no3.gif')
+
+%%
+plot_sequence(F,allFFTWindows,maxFFT,low_c,high_c,A,1)
+saveas(gcf,'pngs/Gbmaj7#9#11no3.png')
 
 
 
